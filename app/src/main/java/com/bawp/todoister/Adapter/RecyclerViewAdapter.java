@@ -7,6 +7,8 @@ import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioButton;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatRadioButton;
@@ -60,13 +62,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        public AppCompatRadioButton radioButton;
-        public AppCompatTextView TaskName;
+        public RadioButton radioButton;
+        public TextView TaskName;
         public Chip todayChip;
         ToDoOnClickListner toDoOnClickListner;
         public ViewHolder(@NonNull View itemView,ToDoOnClickListner toDoOnClickListner) {
             super(itemView);
-            radioButton = itemView.findViewById(R.id.todo_radio_button);
+            radioButton =  itemView.findViewById(R.id.todo_radio_button);
             radioButton.setOnClickListener(this);
             TaskName = itemView.findViewById(R.id.todo_row_todo);
             todayChip = itemView.findViewById(R.id.todo_row_chip);
